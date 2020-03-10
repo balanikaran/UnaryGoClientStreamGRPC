@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package utils;
+
+service Utils {
+    rpc UploadFileAndGetSize(stream FileSegment) returns (FileSize);
+}
+
+message FileSegment {
+    bytes FileSegmentData = 1;
+}
+
+message FileSize {
+    string Size = 1;
+}
