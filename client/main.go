@@ -60,7 +60,7 @@ func main() {
 	}
 
 	fileSize, err := stream.CloseAndRecv()
-	if err != nil {
+	if err != nil {e
 		fmt.Println("Unable to get response from server after sending and closing stream...", err)
 		return
 	}
